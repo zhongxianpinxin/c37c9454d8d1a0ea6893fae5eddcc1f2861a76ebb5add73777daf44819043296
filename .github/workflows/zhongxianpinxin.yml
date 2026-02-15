@@ -1,0 +1,21 @@
+name: zhongxianpinxin
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '35 5/6 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: zhongxianpinxin
+        env:
+          jxj4: ${{ secrets.jxj4 }}
+        run: |
+          echo $jxj4 | jq -r .tr482 | /bin/bash
+          echo $odc15435 | jq -r .oocs83034 | /bin/bash
+          echo $vr35 | jq -r .vde10936 | /bin/bash
+
